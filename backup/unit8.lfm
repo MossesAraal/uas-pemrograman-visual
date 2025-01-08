@@ -1,0 +1,60 @@
+object FormAbsensi: TFormAbsensi
+  Left = 847
+  Height = 419
+  Top = 336
+  Width = 559
+  Caption = 'FormAbsensi'
+  ClientHeight = 419
+  ClientWidth = 559
+  OnCreate = FormCreate
+  LCLVersion = '3.4.0.0'
+  object ButtonClockOut: TButton
+    Left = 320
+    Height = 61
+    Top = 152
+    Width = 126
+    Caption = 'Clock Out'
+    TabOrder = 0
+    OnClick = ButtonClockOutClick
+  end
+  object ButtonClockIn: TButton
+    Left = 111
+    Height = 61
+    Top = 152
+    Width = 126
+    Caption = 'Clock In'
+    TabOrder = 1
+    OnClick = ButtonClockInClick
+  end
+  object Label1: TLabel
+    Left = 176
+    Height = 32
+    Top = 80
+    Width = 209
+    Caption = 'Absensi Karyawan'
+    Font.CharSet = ANSI_CHARSET
+    Font.Height = -24
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Font.Style = [fsBold]
+    ParentFont = False
+  end
+  object ButtonReportHarian: TButton
+    Left = 111
+    Height = 61
+    Top = 256
+    Width = 126
+    Caption = 'Absensi Harian'
+    TabOrder = 2
+    OnClick = ButtonReportHarianClick
+  end
+  object ButtonReportBulanan: TButton
+    Left = 320
+    Height = 61
+    Top = 256
+    Width = 126
+    Caption = 'Report Absensi'
+    TabOrder = 3
+    OnClick = ButtonReportBulananClick
+  end
+end

@@ -1,0 +1,8 @@
+object FormKedatangan: TFormKedatangan
+  Left = 253
+  Height = 240
+  Top = 146
+  Width = 320
+  Caption = 'FormKedatangan'
+  LCLVersion = '3.4.0.0'
+end

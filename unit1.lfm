@@ -1,0 +1,113 @@
+object FormLogin: TFormLogin
+  Left = 698
+  Height = 365
+  Top = 287
+  Width = 578
+  Caption = 'FormLogin'
+  ClientHeight = 365
+  ClientWidth = 578
+  LCLVersion = '3.4.0.0'
+  object ButtonLogin: TButton
+    Left = 160
+    Height = 25
+    Top = 120
+    Width = 72
+    Caption = 'Login'
+    TabOrder = 0
+    OnClick = ButtonLoginClick
+  end
+  object EditUsername: TEdit
+    Left = 160
+    Height = 23
+    Top = 57
+    Width = 144
+    TabOrder = 1
+  end
+  object EditPassword: TEdit
+    Left = 160
+    Height = 23
+    Top = 88
+    Width = 144
+    EchoMode = emPassword
+    PasswordChar = '*'
+    TabOrder = 2
+  end
+  object Label2: TLabel
+    Left = 88
+    Height = 20
+    Top = 91
+    Width = 61
+    Caption = 'Password'
+    Font.CharSet = ANSI_CHARSET
+    Font.Height = -15
+    Font.Name = 'Segoe UI'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    ParentFont = False
+  end
+  object Label3: TLabel
+    Left = 88
+    Height = 20
+    Top = 60
+    Width = 66
+    Caption = 'Username'
+    Font.CharSet = ANSI_CHARSET
+    Font.Height = -15
+    Font.Name = 'Segoe UI'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    ParentFont = False
+  end
+  object Label4: TLabel
+    Left = 160
+    Height = 30
+    Top = 16
+    Width = 56
+    Caption = 'Login'
+    Font.CharSet = ANSI_CHARSET
+    Font.Height = -21
+    Font.Name = 'Segoe UI'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Font.Style = [fsBold]
+    ParentFont = False
+  end
+  object Button1: TButton
+    Left = 229
+    Height = 25
+    Top = 120
+    Width = 75
+    Caption = 'Register'
+    TabOrder = 3
+    OnClick = Button1Click
+  end
+  object ZConnection1: TZConnection
+    ControlsCodePage = cCP_UTF8
+    Properties.Strings = (
+      'RawStringEncoding=DB_CP'
+    )
+    Connected = True
+    AfterConnect = ZConnection1AfterConnect
+    DisableSavepoints = False
+    HostName = 'localhost'
+    Port = 5432
+    Database = 'pemrogramanVisual'
+    User = 'postgres'
+    Password = 'Araal14'
+    Protocol = 'postgresql'
+    LibraryLocation = 'C:\Program Files\PostgreSQL\15\bin\libpq.dll'
+    Left = 112
+    Top = 216
+  end
+  object ZQuery1: TZQuery
+    Connection = ZConnection1
+    Params = <>
+    Left = 192
+    Top = 216
+  end
+  object DataSource1: TDataSource
+    DataSet = ZQuery1
+    Left = 264
+    Top = 216
+  end
+end

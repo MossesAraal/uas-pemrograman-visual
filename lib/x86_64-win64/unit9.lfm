@@ -1,0 +1,119 @@
+object FormAbsenIn: TFormAbsenIn
+  Left = 253
+  Height = 616
+  Top = 146
+  Width = 691
+  Caption = 'FormAbsenIn'
+  ClientHeight = 616
+  ClientWidth = 691
+  LCLVersion = '3.4.0.0'
+  object Label1: TLabel
+    Left = 168
+    Height = 32
+    Top = 37
+    Width = 412
+    Caption = 'ABSENSI KEDATANGAN KARYAWAN'
+    Font.CharSet = ANSI_CHARSET
+    Font.Height = -24
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Font.Style = [fsBold]
+    ParentFont = False
+  end
+  object EditIDKaryawan: TEdit
+    Left = 345
+    Height = 23
+    Top = 132
+    Width = 123
+    TabOrder = 0
+  end
+  object ComboBoxStatusKehadiran: TComboBox
+    Left = 345
+    Height = 23
+    Top = 181
+    Width = 119
+    ItemHeight = 15
+    Items.Strings = (
+      'Hadir'
+      'Izin'
+      'Sakit'
+      'Cuti'
+    )
+    TabOrder = 1
+  end
+  object ButtonAbsenIn: TButton
+    Left = 294
+    Height = 25
+    Top = 235
+    Width = 75
+    Caption = 'Absen'
+    TabOrder = 2
+    OnClick = ButtonAbsenInClick
+  end
+  object Label4: TLabel
+    Left = 218
+    Height = 20
+    Top = 135
+    Width = 83
+    Caption = 'ID Karyawan'
+    Font.CharSet = ANSI_CHARSET
+    Font.Height = -15
+    Font.Name = 'Segoe UI'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    ParentFont = False
+  end
+  object Label5: TLabel
+    Left = 218
+    Height = 20
+    Top = 184
+    Width = 111
+    Caption = 'Status Kehadiran'
+    Font.CharSet = ANSI_CHARSET
+    Font.Height = -15
+    Font.Name = 'Segoe UI'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    ParentFont = False
+  end
+  object ZConnection1: TZConnection
+    ControlsCodePage = cCP_UTF8
+    Properties.Strings = (
+      'RawStringEncoding=DB_CP'
+    )
+    Connected = True
+    AfterConnect = ZConnection1AfterConnect
+    DisableSavepoints = False
+    HostName = 'localhost'
+    Port = 5432
+    Database = 'pemrogramanVisual'
+    User = 'postgres'
+    Password = 'Araal14'
+    Protocol = 'postgresql'
+    LibraryLocation = 'C:\Program Files\PostgreSQL\15\bin\libpq.dll'
+    Left = 116
+    Top = 584
+  end
+  object ZQuery1: TZQuery
+    Connection = ZConnection1
+    SQL.Strings = (
+      'SELECT  jam_masuk, status_kehadiran FROM absen WHERE id_karyawan = :id_karyawan ORDER BY absen_id DESC;'
+    )
+    Params = <    
+      item
+        Name = 'id_karyawan'
+      end>
+    MasterSource = DataSource1
+    Left = 177
+    Top = 584
+    ParamData = <    
+      item
+        Name = 'id_karyawan'
+      end>
+  end
+  object DataSource1: TDataSource
+    DataSet = ZQuery1
+    Left = 236
+    Top = 587
+  end
+end

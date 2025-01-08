@@ -1,0 +1,349 @@
+object FormRegister: TFormRegister
+  Left = 1066
+  Height = 594
+  Top = 255
+  Width = 577
+  Caption = 'FormRegister'
+  ClientHeight = 594
+  ClientWidth = 577
+  OnCreate = FormCreate
+  LCLVersion = '3.4.0.0'
+  object EditUsername: TEdit
+    Left = 168
+    Height = 23
+    Top = 48
+    Width = 280
+    TabOrder = 0
+  end
+  object EditPassword: TEdit
+    Left = 168
+    Height = 23
+    Top = 72
+    Width = 280
+    EchoMode = emPassword
+    PasswordChar = '*'
+    TabOrder = 1
+  end
+  object EditNama: TEdit
+    Left = 168
+    Height = 23
+    Top = 96
+    Width = 280
+    TabOrder = 2
+  end
+  object Register: TButton
+    Left = 168
+    Height = 25
+    Top = 320
+    Width = 75
+    Caption = 'Register'
+    TabOrder = 3
+    OnClick = RegisterClick
+  end
+  object Label3: TLabel
+    Left = 56
+    Height = 20
+    Top = 51
+    Width = 66
+    Caption = 'Username'
+    Font.CharSet = ANSI_CHARSET
+    Font.Height = -15
+    Font.Name = 'Segoe UI'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    ParentFont = False
+  end
+  object Label4: TLabel
+    Left = 56
+    Height = 20
+    Top = 75
+    Width = 61
+    Caption = 'Password'
+    Font.CharSet = ANSI_CHARSET
+    Font.Height = -15
+    Font.Name = 'Segoe UI'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    ParentFont = False
+  end
+  object Label5: TLabel
+    Left = 56
+    Height = 20
+    Top = 100
+    Width = 40
+    Caption = 'Nama'
+    Font.CharSet = ANSI_CHARSET
+    Font.Height = -15
+    Font.Name = 'Segoe UI'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    ParentFont = False
+  end
+  object Label6: TLabel
+    Left = 56
+    Height = 30
+    Top = 8
+    Width = 79
+    Caption = 'Register'
+    Font.CharSet = ANSI_CHARSET
+    Font.Height = -21
+    Font.Name = 'Segoe UI'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Font.Style = [fsBold]
+    ParentFont = False
+  end
+  object TimePickerTanggalLahir: TDateTimePicker
+    Left = 168
+    Height = 23
+    Top = 120
+    Width = 83
+    CenturyFrom = 1941
+    MaxDate = 2958465
+    MinDate = -53780
+    TabOrder = 4
+    TrailingSeparator = False
+    TextForNullDate = 'NULL'
+    LeadingZeros = True
+    Kind = dtkDate
+    TimeFormat = tf24
+    TimeDisplay = tdHMS
+    DateMode = dmComboBox
+    Date = 45653
+    Time = 0.884487060182437
+    UseDefaultSeparators = True
+    HideDateTimeParts = []
+    MonthNames = 'Long'
+  end
+  object Label7: TLabel
+    Left = 56
+    Height = 20
+    Top = 123
+    Width = 88
+    Caption = 'Tanggal Lahir'
+    Font.CharSet = ANSI_CHARSET
+    Font.Height = -15
+    Font.Name = 'Segoe UI'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    ParentFont = False
+  end
+  object EditEmail: TEdit
+    Left = 168
+    Height = 23
+    Top = 200
+    Width = 280
+    TabOrder = 5
+  end
+  object EditNoTelp: TEdit
+    Left = 168
+    Height = 23
+    Top = 224
+    Width = 280
+    TabOrder = 6
+  end
+  object RadioButtonPria: TRadioButton
+    Left = 168
+    Height = 19
+    Top = 152
+    Width = 38
+    Caption = 'Pria'
+    TabOrder = 7
+  end
+  object RadioButtonWanita: TRadioButton
+    Left = 216
+    Height = 19
+    Top = 152
+    Width = 55
+    Caption = 'Wanita'
+    TabOrder = 8
+  end
+  object Label8: TLabel
+    Left = 56
+    Height = 20
+    Top = 151
+    Width = 89
+    Caption = 'Jenis Kelamin'
+    Font.CharSet = ANSI_CHARSET
+    Font.Height = -15
+    Font.Name = 'Segoe UI'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    ParentFont = False
+  end
+  object TimePickerTanggalMasuk: TDateTimePicker
+    Left = 168
+    Height = 23
+    Top = 176
+    Width = 83
+    CenturyFrom = 1941
+    MaxDate = 2958465
+    MinDate = -53780
+    TabOrder = 9
+    TrailingSeparator = False
+    TextForNullDate = 'NULL'
+    LeadingZeros = True
+    Kind = dtkDate
+    TimeFormat = tf24
+    TimeDisplay = tdHMS
+    DateMode = dmComboBox
+    Date = 45653
+    Time = 0.884487060182437
+    UseDefaultSeparators = True
+    HideDateTimeParts = []
+    MonthNames = 'Long'
+  end
+  object Label9: TLabel
+    Left = 56
+    Height = 20
+    Top = 179
+    Width = 98
+    Caption = 'Tanggal Masuk'
+    Font.CharSet = ANSI_CHARSET
+    Font.Height = -15
+    Font.Name = 'Segoe UI'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    ParentFont = False
+  end
+  object Label10: TLabel
+    Left = 56
+    Height = 20
+    Top = 203
+    Width = 37
+    Caption = 'Email'
+    Font.CharSet = ANSI_CHARSET
+    Font.Height = -15
+    Font.Name = 'Segoe UI'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    ParentFont = False
+  end
+  object Label11: TLabel
+    Left = 56
+    Height = 20
+    Top = 227
+    Width = 77
+    Caption = 'No Telepon'
+    Font.CharSet = ANSI_CHARSET
+    Font.Height = -15
+    Font.Name = 'Segoe UI'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    ParentFont = False
+  end
+  object Label12: TLabel
+    Left = 56
+    Height = 20
+    Top = 251
+    Width = 48
+    Caption = 'Alamat'
+    Font.CharSet = ANSI_CHARSET
+    Font.Height = -15
+    Font.Name = 'Segoe UI'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    ParentFont = False
+    OnClick = Label12Click
+  end
+  object EditAlamat: TEdit
+    Left = 168
+    Height = 23
+    Top = 248
+    Width = 280
+    TabOrder = 10
+  end
+  object Bagian: TComboBox
+    Left = 168
+    Height = 23
+    Top = 272
+    Width = 100
+    ItemHeight = 15
+    Items.Strings = (
+      'Admin'
+      'IT'
+      'HRD'
+      'Purchasing'
+      'Marketing'
+      'Engineering'
+      'Quality Control'
+      'Produksi'
+      'Maintenance'
+    )
+    TabOrder = 11
+    Text = 'Bagian'
+  end
+  object Label13: TLabel
+    Left = 56
+    Height = 20
+    Top = 275
+    Width = 46
+    Caption = 'Bagian'
+    Font.CharSet = ANSI_CHARSET
+    Font.Height = -15
+    Font.Name = 'Segoe UI'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    ParentFont = False
+    OnClick = Label12Click
+  end
+  object Label14: TLabel
+    Left = 56
+    Height = 20
+    Top = 296
+    Width = 51
+    Caption = 'Jabatan'
+    Font.CharSet = ANSI_CHARSET
+    Font.Height = -15
+    Font.Name = 'Segoe UI'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    ParentFont = False
+    OnClick = Label12Click
+  end
+  object Jabatan: TComboBox
+    Left = 168
+    Height = 23
+    Top = 293
+    Width = 100
+    ItemHeight = 15
+    Items.Strings = (
+      'Department Head'
+      'Section Head'
+      'Supervisor'
+      'Staff'
+      'Operator'
+    )
+    TabOrder = 12
+    Text = 'Jabatan'
+  end
+  object ZQuery1: TZQuery
+    Connection = ZConnection1
+    Params = <>
+    Left = 96
+    Top = 464
+  end
+  object ZConnection1: TZConnection
+    ControlsCodePage = cCP_UTF8
+    Properties.Strings = (
+      'RawStringEncoding=DB_CP'
+    )
+    Connected = True
+    DisableSavepoints = False
+    HostName = 'localhost'
+    Port = 5432
+    Database = 'pemrogramanVisual'
+    User = 'postgres'
+    Password = 'Araal14'
+    Protocol = 'postgresql'
+    LibraryLocation = 'C:\Program Files\PostgreSQL\15\bin\libpq.dll'
+    Left = 48
+    Top = 464
+  end
+  object DataSource1: TDataSource
+    DataSet = ZQuery1
+    OnDataChange = DataSource1DataChange
+    Left = 144
+    Top = 464
+  end
+end

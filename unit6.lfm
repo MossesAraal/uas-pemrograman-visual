@@ -1,0 +1,85 @@
+object FormMonitoringAbsensi: TFormMonitoringAbsensi
+  Left = 916
+  Height = 494
+  Top = 187
+  Width = 900
+  Caption = 'FormMonitoringAbsensi'
+  ClientHeight = 494
+  ClientWidth = 900
+  OnCreate = FormCreate
+  LCLVersion = '3.4.0.0'
+  object Label1: TLabel
+    Left = 16
+    Height = 37
+    Top = 8
+    Width = 241
+    Caption = 'Monitoring Absensi'
+    Font.CharSet = ANSI_CHARSET
+    Font.Height = -27
+    Font.Name = 'Segoe UI Semibold'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Font.Style = [fsBold]
+    ParentFont = False
+  end
+  object ButtonIReportAbsensiHarian: TButton
+    Left = 16
+    Height = 25
+    Top = 48
+    Width = 144
+    Caption = 'Absensi Harian'
+    TabOrder = 0
+    OnClick = ButtonIReportAbsensiHarianClick
+  end
+  object DBGrid1: TDBGrid
+    Left = 0
+    Height = 242
+    Top = 80
+    Width = 808
+    Color = clWindow
+    Columns = <>
+    DataSource = DataSource1
+    TabOrder = 1
+  end
+  object ButtonReportBulanan: TButton
+    Left = 160
+    Height = 25
+    Top = 48
+    Width = 147
+    Caption = 'Report Absensi'
+    TabOrder = 2
+    OnClick = ButtonReportBulananClick
+  end
+  object ZConnection1: TZConnection
+    ControlsCodePage = cCP_UTF8
+    Properties.Strings = (
+      'RawStringEncoding=DB_CP'
+    )
+    Connected = True
+    DisableSavepoints = False
+    HostName = 'localhost'
+    Port = 5432
+    Database = 'pemrogramanVisual'
+    User = 'postgres'
+    Password = 'Araal14'
+    Protocol = 'postgresql'
+    LibraryLocation = 'C:\Program Files\PostgreSQL\15\bin\libpq.dll'
+    Left = 244
+    Top = 452
+  end
+  object DataSource1: TDataSource
+    DataSet = ZQuery1
+    Left = 292
+    Top = 452
+  end
+  object ZQuery1: TZQuery
+    Connection = ZConnection1
+    Active = True
+    SQL.Strings = (
+      'SELECT k.id, k.username, k.nama, k.department, k.jabatan, a.jam_masuk, a.jam_keluar, a.status_kehadiran FROM karyawan AS k INNER JOIN absensi AS a ON k.id = a.id;'
+    )
+    Params = <>
+    Left = 340
+    Top = 452
+  end
+end

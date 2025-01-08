@@ -1,0 +1,256 @@
+object FormReportAbsensiBulanan: TFormReportAbsensiBulanan
+  Left = 894
+  Height = 486
+  Top = 151
+  Width = 466
+  Caption = 'FormReportAbsensiBulanan'
+  ClientHeight = 486
+  ClientWidth = 466
+  LCLVersion = '3.4.0.0'
+  object Label3: TLabel
+    Left = 32
+    Height = 20
+    Top = 48
+    Width = 83
+    Caption = 'ID Karyawan'
+    Font.CharSet = ANSI_CHARSET
+    Font.Height = -15
+    Font.Name = 'Segoe UI'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    ParentFont = False
+  end
+  object EditIDKaryawan: TEdit
+    Left = 128
+    Height = 23
+    Top = 45
+    Width = 176
+    TabOrder = 0
+  end
+  object ButtonDisplay: TButton
+    Left = 304
+    Height = 25
+    Top = 43
+    Width = 75
+    Caption = 'Display'
+    TabOrder = 1
+    OnClick = ButtonDisplayClick
+  end
+  object Label1: TLabel
+    Left = 32
+    Height = 20
+    Top = 136
+    Width = 16
+    Caption = 'ID'
+    Font.CharSet = ANSI_CHARSET
+    Font.Height = -15
+    Font.Name = 'Segoe UI'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Font.Style = [fsBold]
+    ParentFont = False
+  end
+  object LabelID: TLabel
+    Left = 195
+    Height = 20
+    Top = 136
+    Width = 6
+    Caption = '-'
+    Font.CharSet = ANSI_CHARSET
+    Font.Height = -15
+    Font.Name = 'Segoe UI'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    ParentFont = False
+  end
+  object Label2: TLabel
+    Left = 32
+    Height = 20
+    Top = 164
+    Width = 42
+    Caption = 'Nama'
+    Font.CharSet = ANSI_CHARSET
+    Font.Height = -15
+    Font.Name = 'Segoe UI'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Font.Style = [fsBold]
+    ParentFont = False
+  end
+  object LabelNama: TLabel
+    Left = 195
+    Height = 20
+    Top = 164
+    Width = 6
+    Caption = '-'
+    Font.CharSet = ANSI_CHARSET
+    Font.Height = -15
+    Font.Name = 'Segoe UI'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    ParentFont = False
+  end
+  object Label6: TLabel
+    Left = 32
+    Height = 20
+    Top = 188
+    Width = 85
+    Caption = 'Department'
+    Font.CharSet = ANSI_CHARSET
+    Font.Height = -15
+    Font.Name = 'Segoe UI'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Font.Style = [fsBold]
+    ParentFont = False
+  end
+  object LabelDepartment: TLabel
+    Left = 195
+    Height = 20
+    Top = 188
+    Width = 6
+    Caption = '-'
+    Font.CharSet = ANSI_CHARSET
+    Font.Height = -15
+    Font.Name = 'Segoe UI'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    ParentFont = False
+  end
+  object Label7: TLabel
+    Left = 32
+    Height = 20
+    Top = 216
+    Width = 55
+    Caption = 'Jabatan'
+    Font.CharSet = ANSI_CHARSET
+    Font.Height = -15
+    Font.Name = 'Segoe UI'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Font.Style = [fsBold]
+    ParentFont = False
+  end
+  object LabelJabatan: TLabel
+    Left = 195
+    Height = 20
+    Top = 216
+    Width = 6
+    Caption = '-'
+    Font.CharSet = ANSI_CHARSET
+    Font.Height = -15
+    Font.Name = 'Segoe UI'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    ParentFont = False
+  end
+  object Label8: TLabel
+    Left = 32
+    Height = 20
+    Top = 244
+    Width = 77
+    Caption = 'Total Hadir'
+    Font.CharSet = ANSI_CHARSET
+    Font.Height = -15
+    Font.Name = 'Segoe UI'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Font.Style = [fsBold]
+    ParentFont = False
+  end
+  object LabelTotalHadir: TLabel
+    Left = 195
+    Height = 20
+    Top = 244
+    Width = 6
+    Caption = '-'
+    Font.CharSet = ANSI_CHARSET
+    Font.Height = -15
+    Font.Name = 'Segoe UI'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    ParentFont = False
+  end
+  object Label9: TLabel
+    Left = 32
+    Height = 20
+    Top = 272
+    Width = 83
+    Caption = 'Total Absen'
+    Font.CharSet = ANSI_CHARSET
+    Font.Height = -15
+    Font.Name = 'Segoe UI'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Font.Style = [fsBold]
+    ParentFont = False
+  end
+  object LabelTotalAbsen: TLabel
+    Left = 195
+    Height = 20
+    Top = 272
+    Width = 6
+    Caption = '-'
+    Font.CharSet = ANSI_CHARSET
+    Font.Height = -15
+    Font.Name = 'Segoe UI'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    ParentFont = False
+  end
+  object Label10: TLabel
+    Left = 32
+    Height = 20
+    Top = 300
+    Width = 64
+    Caption = 'Total Izin'
+    Font.CharSet = ANSI_CHARSET
+    Font.Height = -15
+    Font.Name = 'Segoe UI'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Font.Style = [fsBold]
+    ParentFont = False
+  end
+  object LabelTotalIzin: TLabel
+    Left = 195
+    Height = 20
+    Top = 300
+    Width = 6
+    Caption = '-'
+    Font.CharSet = ANSI_CHARSET
+    Font.Height = -15
+    Font.Name = 'Segoe UI'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    ParentFont = False
+  end
+  object ZConnection1: TZConnection
+    ControlsCodePage = cCP_UTF8
+    Properties.Strings = (
+      'RawStringEncoding=DB_CP'
+    )
+    Connected = True
+    DisableSavepoints = False
+    HostName = 'localhost'
+    Port = 5432
+    Database = 'pemrogramanVisual'
+    User = 'postgres'
+    Password = 'Araal14'
+    Protocol = 'postgresql'
+    LibraryLocation = 'C:\Program Files\PostgreSQL\15\bin\libpq.dll'
+    Left = 132
+    Top = 420
+  end
+  object ZQuery1: TZQuery
+    Connection = ZConnection1
+    Params = <>
+    Left = 180
+    Top = 420
+  end
+  object DataSource1: TDataSource
+    DataSet = ZQuery1
+    Left = 236
+    Top = 420
+  end
+end

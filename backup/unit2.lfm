@@ -1,0 +1,131 @@
+object FormMonitoringKaryawan: TFormMonitoringKaryawan
+  Left = 940
+  Height = 489
+  Top = 200
+  Width = 569
+  Caption = 'FormMonitoringKaryawan'
+  ClientHeight = 489
+  ClientWidth = 569
+  OnCreate = FormCreate
+  LCLVersion = '3.4.0.0'
+  object Label1: TLabel
+    Left = 16
+    Height = 37
+    Top = 8
+    Width = 266
+    Caption = 'Monitoring Karyawan'
+    Font.CharSet = ANSI_CHARSET
+    Font.Height = -27
+    Font.Name = 'Segoe UI Semibold'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Font.Style = [fsBold]
+    ParentFont = False
+    OnClick = Label1Click
+  end
+  object ButtonTambah: TButton
+    Left = 16
+    Height = 25
+    Top = 48
+    Width = 75
+    Caption = 'Tambah'
+    TabOrder = 0
+    OnClick = ButtonTambahClick
+  end
+  object ButtonRefresh: TButton
+    Left = 96
+    Height = 25
+    Top = 48
+    Width = 75
+    Caption = 'Refresh'
+    TabOrder = 1
+    OnClick = ButtonRefreshClick
+  end
+  object ButtonUpdate: TButton
+    Left = 176
+    Height = 25
+    Top = 48
+    Width = 75
+    Caption = 'Update'
+    TabOrder = 2
+    OnClick = ButtonUpdateClick
+  end
+  object ButtonDelete: TButton
+    Left = 264
+    Height = 25
+    Top = 48
+    Width = 75
+    Caption = 'Delete'
+    TabOrder = 3
+    OnClick = ButtonDeleteClick
+  end
+  object EditDelete: TEdit
+    Left = 344
+    Height = 23
+    Top = 48
+    Width = 96
+    HelpType = htKeyword
+    TabOrder = 4
+    OnChange = EditDeleteChange
+  end
+  object DBGrid1: TDBGrid
+    Left = 16
+    Height = 242
+    Top = 80
+    Width = 808
+    Color = clWindow
+    Columns = <>
+    DataSource = DataSource1
+    TabOrder = 5
+  end
+  object ButtonMonitoringAbsensi: TButton
+    Left = 16
+    Height = 33
+    Top = 328
+    Width = 120
+    Caption = 'Monitoring Absensi'
+    TabOrder = 6
+    OnClick = ButtonMonitoringAbsensiClick
+  end
+  object ButtonDetailKaryawan: TButton
+    Left = 144
+    Height = 33
+    Top = 328
+    Width = 120
+    Caption = 'Detail Karyawan'
+    TabOrder = 7
+    OnClick = ButtonDetailKaryawanClick
+  end
+  object DataSource1: TDataSource
+    DataSet = ZQuery1
+    Left = 264
+    Top = 424
+  end
+  object ZConnection1: TZConnection
+    ControlsCodePage = cCP_UTF8
+    Properties.Strings = (
+      'RawStringEncoding=DB_CP'
+    )
+    Connected = True
+    DisableSavepoints = False
+    HostName = 'localhost'
+    Port = 5432
+    Database = 'pemrogramanVisual'
+    User = 'postgres'
+    Password = 'Araal14'
+    Protocol = 'postgresql'
+    LibraryLocation = 'C:\Program Files\PostgreSQL\15\bin\libpq.dll'
+    Left = 216
+    Top = 424
+  end
+  object ZQuery1: TZQuery
+    Connection = ZConnection1
+    Active = True
+    SQL.Strings = (
+      'SELECT id, username, nama, tanggal_lahir, jenis_kelamin, tanggal_masuk, email, no_telp, alamat, department, jabatan FROM karyawan;'
+    )
+    Params = <>
+    Left = 312
+    Top = 424
+  end
+end

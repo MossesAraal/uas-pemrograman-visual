@@ -1,0 +1,392 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <ProjectSession>
+    <PathDelim Value="\"/>
+    <Version Value="12"/>
+    <BuildModes Active="Default"/>
+    <Units>
+      <Unit>
+        <Filename Value="project1.lpr"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="4"/>
+        <CursorPos X="53" Y="30"/>
+        <UsageCount Value="60"/>
+        <Loaded Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="unit1.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FormLogin"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="Unit1"/>
+        <TopLine Value="9"/>
+        <CursorPos X="3" Y="49"/>
+        <UsageCount Value="60"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="unit2.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FormMonitoringKaryawan"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="Unit2"/>
+        <EditorIndex Value="9"/>
+        <TopLine Value="80"/>
+        <CursorPos X="3" Y="85"/>
+        <UsageCount Value="60"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="unit3.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FormRegister"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="Unit3"/>
+        <EditorIndex Value="7"/>
+        <TopLine Value="99"/>
+        <CursorPos X="183" Y="104"/>
+        <UsageCount Value="60"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="unit4.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FormTambahKaryawan"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="Unit4"/>
+        <EditorIndex Value="15"/>
+        <TopLine Value="93"/>
+        <CursorPos X="191" Y="121"/>
+        <UsageCount Value="54"/>
+        <Loaded Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="unit5.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FormUpdateKaryawan"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="Unit5"/>
+        <EditorIndex Value="6"/>
+        <TopLine Value="60"/>
+        <CursorPos X="3" Y="64"/>
+        <UsageCount Value="51"/>
+        <Loaded Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="unit6.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FormMonitoringAbsensi"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="Unit6"/>
+        <EditorIndex Value="10"/>
+        <CursorPos X="47" Y="9"/>
+        <UsageCount Value="48"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="unit7.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FormReportAbsensiHarian"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="Unit7"/>
+        <EditorIndex Value="14"/>
+        <TopLine Value="64"/>
+        <CursorPos X="11" Y="93"/>
+        <UsageCount Value="45"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="unit8.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FormAbsensi"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="Unit8"/>
+        <EditorIndex Value="1"/>
+        <TopLine Value="37"/>
+        <CursorPos X="3" Y="54"/>
+        <UsageCount Value="40"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="unitkedatangan.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FormAbsenDatang"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="UnitKedatangan"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="60"/>
+        <CursorPos X="3" Y="85"/>
+        <UsageCount Value="40"/>
+      </Unit>
+      <Unit>
+        <Filename Value="unitabsenpulang.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FormAbsenPulang"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="UnitAbsenPulang"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos X="75" Y="26"/>
+        <UsageCount Value="40"/>
+      </Unit>
+      <Unit>
+        <Filename Value="unitabsenmasuk.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="Form1"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="UnitAbsenMasuk"/>
+        <EditorIndex Value="-1"/>
+        <UsageCount Value="40"/>
+      </Unit>
+      <Unit>
+        <Filename Value="unit9.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FormAbsenIn"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="Unit9"/>
+        <EditorIndex Value="5"/>
+        <TopLine Value="51"/>
+        <CursorPos X="96" Y="55"/>
+        <UsageCount Value="39"/>
+        <Loaded Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="unit10.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FormAbsenOut"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="Unit10"/>
+        <EditorIndex Value="3"/>
+        <TopLine Value="54"/>
+        <CursorPos X="55" Y="69"/>
+        <UsageCount Value="39"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="unit11.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FormDetailKaryawan"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="Unit11"/>
+        <EditorIndex Value="13"/>
+        <TopLine Value="39"/>
+        <CursorPos X="3" Y="62"/>
+        <UsageCount Value="34"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="unit12.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FormReportAbsensiBulanan"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="Unit12"/>
+        <EditorIndex Value="11"/>
+        <TopLine Value="24"/>
+        <CursorPos X="3" Y="54"/>
+        <UsageCount Value="33"/>
+        <Loaded Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="unit13.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FormReportAbsensi"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="Unit13"/>
+        <EditorIndex Value="12"/>
+        <TopLine Value="61"/>
+        <CursorPos X="21" Y="89"/>
+        <UsageCount Value="25"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="C:\new-lazarus\src\component\ZAbstractRODataset.pas"/>
+        <EditorIndex Value="8"/>
+        <TopLine Value="3790"/>
+        <CursorPos Y="3805"/>
+        <UsageCount Value="31"/>
+        <Loaded Value="True"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit>
+      <Unit>
+        <Filename Value="unitabsendatang.pas"/>
+        <UnitName Value="UnitAbsenDatang"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos X="21"/>
+        <UsageCount Value="10"/>
+      </Unit>
+      <Unit>
+        <Filename Value="unit14.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FormAbsensiBulanan"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="Unit14"/>
+        <IsVisibleTab Value="True"/>
+        <EditorIndex Value="2"/>
+        <TopLine Value="125"/>
+        <CursorPos X="108" Y="148"/>
+        <UsageCount Value="23"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit>
+    </Units>
+    <JumpHistory HistoryIndex="29">
+      <Position>
+        <Filename Value="unit14.pas"/>
+        <Caret Line="53" Column="49" TopLine="23"/>
+      </Position>
+      <Position>
+        <Filename Value="unit14.pas"/>
+        <Caret Line="54" Column="35" TopLine="23"/>
+      </Position>
+      <Position>
+        <Filename Value="unit14.pas"/>
+        <Caret Line="57" Column="29" TopLine="27"/>
+      </Position>
+      <Position>
+        <Filename Value="unit14.pas"/>
+        <Caret Line="62" Column="38" TopLine="31"/>
+      </Position>
+      <Position>
+        <Filename Value="unit14.pas"/>
+        <Caret Line="100" Column="17" TopLine="68"/>
+      </Position>
+      <Position>
+        <Filename Value="unit14.pas"/>
+        <Caret Line="106" Column="62" TopLine="42"/>
+      </Position>
+      <Position>
+        <Filename Value="unit14.pas"/>
+        <Caret Line="110" Column="17" TopLine="78"/>
+      </Position>
+      <Position>
+        <Filename Value="unit14.pas"/>
+        <Caret Line="107" Column="71" TopLine="81"/>
+      </Position>
+      <Position>
+        <Filename Value="unit14.pas"/>
+        <Caret Line="106" Column="71" TopLine="80"/>
+      </Position>
+      <Position>
+        <Filename Value="unit14.pas"/>
+        <Caret Line="105" Column="71" TopLine="79"/>
+      </Position>
+      <Position>
+        <Filename Value="unit14.pas"/>
+        <Caret Line="119" Column="71" TopLine="93"/>
+      </Position>
+      <Position>
+        <Filename Value="unit14.pas"/>
+        <Caret Line="118" Column="71" TopLine="92"/>
+      </Position>
+      <Position>
+        <Filename Value="unit14.pas"/>
+        <Caret Line="117" Column="71" TopLine="91"/>
+      </Position>
+      <Position>
+        <Filename Value="unit14.pas"/>
+        <Caret Line="116" Column="71" TopLine="90"/>
+      </Position>
+      <Position>
+        <Filename Value="unit14.pas"/>
+        <Caret Line="115" Column="71" TopLine="89"/>
+      </Position>
+      <Position>
+        <Filename Value="unit14.pas"/>
+        <Caret Line="114" Column="71" TopLine="88"/>
+      </Position>
+      <Position>
+        <Filename Value="unit14.pas"/>
+        <Caret Line="113" Column="71" TopLine="87"/>
+      </Position>
+      <Position>
+        <Filename Value="unit14.pas"/>
+        <Caret Line="112" Column="71" TopLine="86"/>
+      </Position>
+      <Position>
+        <Filename Value="unit14.pas"/>
+        <Caret Line="111" Column="71" TopLine="85"/>
+      </Position>
+      <Position>
+        <Filename Value="unit14.pas"/>
+        <Caret Line="110" Column="71" TopLine="84"/>
+      </Position>
+      <Position>
+        <Filename Value="unit14.pas"/>
+        <Caret Line="109" Column="71" TopLine="83"/>
+      </Position>
+      <Position>
+        <Filename Value="unit14.pas"/>
+        <Caret Line="108" Column="71" TopLine="82"/>
+      </Position>
+      <Position>
+        <Filename Value="unit14.pas"/>
+        <Caret Line="107" Column="71" TopLine="81"/>
+      </Position>
+      <Position>
+        <Filename Value="unit14.pas"/>
+        <Caret Line="106" Column="71" TopLine="80"/>
+      </Position>
+      <Position>
+        <Filename Value="unit14.pas"/>
+        <Caret Line="105" Column="71" TopLine="79"/>
+      </Position>
+      <Position>
+        <Filename Value="unit14.pas"/>
+        <Caret Line="119" Column="71" TopLine="93"/>
+      </Position>
+      <Position>
+        <Filename Value="unit14.pas"/>
+        <Caret Line="131" Column="6" TopLine="108"/>
+      </Position>
+      <Position>
+        <Filename Value="unit14.pas"/>
+        <Caret Line="153" Column="6" TopLine="124"/>
+      </Position>
+      <Position>
+        <Filename Value="unit13.pas"/>
+        <Caret Line="67" Column="134" TopLine="57"/>
+      </Position>
+      <Position>
+        <Filename Value="unit14.pas"/>
+        <Caret Line="157" Column="8" TopLine="130"/>
+      </Position>
+    </JumpHistory>
+    <RunParams>
+      <FormatVersion Value="2"/>
+      <Modes ActiveMode=""/>
+    </RunParams>
+  </ProjectSession>
+  <Debugging>
+    <BreakPoints>
+      <Item>
+        <Kind Value="bpkSource"/>
+        <WatchScope Value="wpsLocal"/>
+        <WatchKind Value="wpkWrite"/>
+        <Source Value="unit12.pas"/>
+        <Line Value="53"/>
+      </Item>
+    </BreakPoints>
+  </Debugging>
+</CONFIG>
