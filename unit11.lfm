@@ -14,7 +14,7 @@ object FormDetailKaryawan: TFormDetailKaryawan
     Top = 45
     Width = 75
     Caption = 'Display'
-    TabOrder = 0
+    TabOrder = 1
     OnClick = Button1Click
   end
   object EditIDKaryawan: TEdit
@@ -22,7 +22,7 @@ object FormDetailKaryawan: TFormDetailKaryawan
     Height = 23
     Top = 45
     Width = 120
-    TabOrder = 1
+    TabOrder = 0
   end
   object Label3: TLabel
     Left = 40
@@ -307,6 +307,15 @@ object FormDetailKaryawan: TFormDetailKaryawan
     Font.Pitch = fpVariable
     Font.Quality = fqDraft
     ParentFont = False
+  end
+  object Button2: TButton
+    Left = 40
+    Height = 25
+    Top = 432
+    Width = 75
+    Caption = 'Kembali'
+    TabOrder = 2
+    OnClick = Button2Click
   end
   object ZConnection1: TZConnection
     ControlsCodePage = cCP_UTF8

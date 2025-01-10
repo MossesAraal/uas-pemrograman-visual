@@ -13,6 +13,7 @@ type
   { TFormAbsensiBulanan }
 
   TFormAbsensiBulanan = class(TForm)
+    ButtonKembali: TButton;
     ButtonDisplay: TButton;
     ComboBoxTahun: TComboBox;
     ComboBoxBulan: TComboBox;
@@ -38,6 +39,8 @@ type
     ZConnection1: TZConnection;
     ZQuery1: TZQuery;
     procedure ButtonDisplayClick(Sender: TObject);
+    procedure ButtonKembaliClick(Sender: TObject);
+    procedure FormCreate(Sender: TObject);
     procedure Label4Click(Sender: TObject);
   private
 
@@ -49,6 +52,8 @@ var
   FormAbsensiBulanan: TFormAbsensiBulanan;
 
 implementation
+uses
+  Unit2, Unit6;
 
 {$R *.lfm}
 
@@ -113,8 +118,6 @@ begin
      bulan := '12';
    end;
 
-  showMessage(bulan);
-
   if EditIDKaryawan.Text = '' then
     begin
       showMessage('id karyawan kosong');
@@ -130,26 +133,28 @@ begin
   else
    begin
      ZQuery1.SQL.Text := 'select count(id) from absensi where tanggal like :tanggal and tanggal like :tahun and status_kehadiran = :status_kehadiran and id = :id';
-     ZQuery1.ParamByName('tanggal').AsString := '%' + bulan + '%';
+     ZQuery1.ParamByName('tanggal').AsString := bulan + '%';
      ZQuery1.ParamByName('status_kehadiran').AsString := 'Hadir';
      ZQuery1.ParamByName('id').AsInteger := StrToInt(EditIDKaryawan.Text);
-     ZQuery1.ParamByName('tahun').AsString := '%' + ComboBoxTahun.Text + '%';
+     ZQuery1.ParamByName('tahun').AsString := '%/' + ComboBoxTahun.Text + '%';
      ZQuery1.Open;
      total_hadir := ZQuery1.FieldByName('count').AsInteger;
      ZQuery1.Close;
 
-     ZQuery1.SQL.Text := 'select count(id) from absensi where tanggal like :tanggal and status_kehadiran = :status_kehadiran and id = :id';
-     ZQuery1.ParamByName('tanggal').AsString := '%' + bulan + '%';
+     ZQuery1.SQL.Text := 'select count(id) from absensi where tanggal like :tanggal and tanggal like :tahun and status_kehadiran = :status_kehadiran and id = :id';
+     ZQuery1.ParamByName('tanggal').AsString := bulan + '%';
      ZQuery1.ParamByName('status_kehadiran').AsString := 'Absen';
      ZQuery1.ParamByName('id').AsInteger := StrToInt(EditIDKaryawan.Text);
+     ZQuery1.ParamByName('tahun').AsString := '%/' + ComboBoxTahun.Text + '%';
      ZQuery1.Open;
      total_absen := ZQuery1.FieldByName('count').AsInteger;
      ZQuery1.Close;
 
-     ZQuery1.SQL.Text := 'select count(id) from absensi where tanggal like :tanggal and status_kehadiran = :status_kehadiran and id = :id';
-     ZQuery1.ParamByName('tanggal').AsString := '%' + bulan + '%';
+     ZQuery1.SQL.Text := 'select count(id) from absensi where tanggal like :tanggal and tanggal like :tahun and status_kehadiran = :status_kehadiran and id = :id';
+     ZQuery1.ParamByName('tanggal').AsString := bulan + '%';
      ZQuery1.ParamByName('status_kehadiran').AsString := 'Izin';
      ZQuery1.ParamByName('id').AsInteger := StrToInt(EditIDKaryawan.Text);
+     ZQuery1.ParamByName('tahun').AsString := '%/' + ComboBoxTahun.Text + '%';
      ZQuery1.Open;
      total_izin := ZQuery1.FieldByName('count').AsInteger;
      ZQuery1.Close;
@@ -178,6 +183,17 @@ begin
        end;
       ZQuery1.Close;
    end;
+end;
+
+procedure TFormAbsensiBulanan.ButtonKembaliClick(Sender: TObject);
+begin
+  FormAbsensiBulanan.Close;
+  FormMonitoringAbsensi.Show;
+end;
+
+procedure TFormAbsensiBulanan.FormCreate(Sender: TObject);
+begin
+
 end;
 
 end.

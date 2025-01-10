@@ -1,0 +1,64 @@
+object FormDeleteKaryawan: TFormDeleteKaryawan
+  Left = 253
+  Height = 183
+  Top = 146
+  Width = 320
+  Caption = 'FormDeleteKaryawan'
+  ClientHeight = 183
+  ClientWidth = 320
+  OnCreate = FormCreate
+  LCLVersion = '3.4.0.0'
+  object Button1: TButton
+    Left = 120
+    Height = 25
+    Top = 64
+    Width = 75
+    Caption = 'Delete'
+    TabOrder = 1
+    OnClick = Button1Click
+  end
+  object EditDelete: TEdit
+    Left = 120
+    Height = 23
+    Top = 40
+    Width = 168
+    HelpType = htKeyword
+    TabOrder = 0
+  end
+  object Label3: TLabel
+    Left = 24
+    Height = 20
+    Top = 43
+    Width = 83
+    Caption = 'ID Karyawan'
+    Font.CharSet = ANSI_CHARSET
+    Font.Height = -15
+    Font.Name = 'Segoe UI'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    ParentFont = False
+  end
+  object ButtonBatal: TButton
+    Left = 200
+    Height = 25
+    Top = 64
+    Width = 75
+    Caption = 'Batal'
+    TabOrder = 2
+    OnClick = ButtonBatalClick
+  end
+  object DataSource1: TDataSource
+    DataSet = ZQuery1
+    Left = 128
+    Top = 120
+  end
+  object ZQuery1: TZQuery
+    Connection = FormMonitoringKaryawan.ZConnection1
+    SQL.Strings = (
+      'SELECT id, username, nama, tanggal_lahir, jenis_kelamin, tanggal_masuk, email, no_telp, alamat, department, jabatan FROM karyawan;'
+    )
+    Params = <>
+    Left = 160
+    Top = 120
+  end
+end

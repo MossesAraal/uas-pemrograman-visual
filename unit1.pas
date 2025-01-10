@@ -13,7 +13,6 @@ type
   { TFormLogin }
 
   TFormLogin = class(TForm)
-    Button1: TButton;
     ButtonLogin: TButton;
     DataSource1: TDataSource;
     EditUsername: TEdit;
@@ -25,6 +24,7 @@ type
     ZQuery1: TZQuery;
     procedure Button1Click(Sender: TObject);
     procedure ButtonLoginClick(Sender: TObject);
+    procedure FormCreate(Sender: TObject);
     procedure ZConnection1AfterConnect(Sender: TObject);
   private
 
@@ -58,7 +58,7 @@ begin
        ZQuery1.ParamByName('password').AsString := password;
        ZQuery1.Active := true;
        if ZQuery1.RecordCount > 0 then
-          if ZQuery1.FieldByName('department').AsString = 'HRD' then
+          if (ZQuery1.FieldByName('department').AsString = 'HRD') AND (ZQuery1.FieldByName('jabatan').AsString = 'Staff') then
             begin
               showMessage('login berhasil');
               FormMonitoringKaryawan.Show;
@@ -76,6 +76,13 @@ begin
            ZQuery1.Close;
          end;
      end;
+
+  FormLogin.Hide;
+end;
+
+procedure TFormLogin.FormCreate(Sender: TObject);
+begin
+
 end;
 
 procedure TFormLogin.Button1Click(Sender: TObject);

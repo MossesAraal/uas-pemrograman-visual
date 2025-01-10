@@ -13,6 +13,7 @@ type
   { TFormReportAbsensi }
 
   TFormReportAbsensi = class(TForm)
+    Button1: TButton;
     ButtonDisplay: TButton;
     DataSource1: TDataSource;
     EditIDKaryawan: TEdit;
@@ -33,6 +34,7 @@ type
     LabelTotalIzin: TLabel;
     ZConnection1: TZConnection;
     ZQuery1: TZQuery;
+    procedure Button1Click(Sender: TObject);
     procedure ButtonDisplayClick(Sender: TObject);
     procedure FormCreate(Sender: TObject);
   private
@@ -45,6 +47,8 @@ var
   FormReportAbsensi: TFormReportAbsensi;
 
 implementation
+uses
+  Unit8, Unit1, Unit6;
 
 {$R *.lfm}
 
@@ -88,6 +92,12 @@ begin
         end;
       ZQuery1.Close;
     end;
+end;
+
+procedure TFormReportAbsensi.Button1Click(Sender: TObject);
+begin
+  FormReportAbsensi.Close;
+  FormMonitoringAbsensi.show;
 end;
 
 end.

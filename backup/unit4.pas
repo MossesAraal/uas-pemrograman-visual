@@ -14,6 +14,7 @@ type
 
   TFormTambahKaryawan = class(TForm)
     Bagian: TComboBox;
+    Button1: TButton;
     DataSource1: TDataSource;
     EditAlamat: TEdit;
     EditEmail: TEdit;
@@ -41,6 +42,7 @@ type
     TimePickerTanggalMasuk: TDateTimePicker;
     ZConnection1: TZConnection;
     ZQuery1: TZQuery;
+    procedure Button1Click(Sender: TObject);
     procedure FormCreate(Sender: TObject);
     procedure Label14Click(Sender: TObject);
     procedure Label6Click(Sender: TObject);
@@ -55,7 +57,8 @@ var
   FormTambahKaryawan: TFormTambahKaryawan;
 
 implementation
-
+uses
+  Unit2;
 {$R *.lfm}
 
 { TFormTambahKaryawan }
@@ -69,6 +72,12 @@ procedure TFormTambahKaryawan.FormCreate(Sender: TObject);
 begin
   TimePickerTanggalLahir.Date := StrToDate(FormatDateTime('mm/dd/yyyy', Now));
   TimePickerTanggalMasuk.Date := StrToDate(FormatDateTime('mm/dd/yyyy', Now));
+end;
+
+procedure TFormTambahKaryawan.Button1Click(Sender: TObject);
+begin
+  FormTambahKaryawan.Close;
+  FormMonitoringKaryawan.Show;
 end;
 
 procedure TFormTambahKaryawan.Label6Click(Sender: TObject);
@@ -117,11 +126,12 @@ begin
       ZQuery1.ParamByName('jabatan').AsString := title;
 
       ZQuery1.ExecSQL;
-      ZQuery1.Open;
-      ZQuery1.Active := true;
-      ZQuery1.Close;
 
       showMessage('karyawan berhasil ditambahkan');
+
+      FormTambahKaryawan.Close;
+      FormMonitoringKaryawan.ZQuery1.Refresh;
+      FormMonitoringKaryawan.Show;
     end;
 end;
 

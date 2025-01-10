@@ -14,7 +14,7 @@ object FormAbsensi: TFormAbsensi
     Top = 184
     Width = 126
     Caption = 'Clock Out'
-    TabOrder = 0
+    TabOrder = 1
     OnClick = ButtonClockOutClick
   end
   object ButtonClockIn: TButton
@@ -23,7 +23,7 @@ object FormAbsensi: TFormAbsensi
     Top = 112
     Width = 126
     Caption = 'Clock In'
-    TabOrder = 1
+    TabOrder = 0
     OnClick = ButtonClockInClick
   end
   object Label1: TLabel
@@ -45,7 +45,7 @@ object FormAbsensi: TFormAbsensi
     Top = 112
     Width = 126
     Caption = 'Absensi Harian'
-    TabOrder = 2
+    TabOrder = 3
     OnClick = ButtonReportHarianClick
   end
   object ButtonReportBulanan: TButton
@@ -54,7 +54,7 @@ object FormAbsensi: TFormAbsensi
     Top = 256
     Width = 126
     Caption = 'Report Absensi'
-    TabOrder = 3
+    TabOrder = 5
     OnClick = ButtonReportBulananClick
   end
   object ButtonAbsensiBulanan: TButton
@@ -65,5 +65,14 @@ object FormAbsensi: TFormAbsensi
     Caption = 'Absensi Bulanan'
     TabOrder = 4
     OnClick = ButtonAbsensiBulananClick
+  end
+  object ButtonSignOut: TButton
+    Left = 104
+    Height = 61
+    Top = 256
+    Width = 126
+    Caption = 'Sign Out'
+    TabOrder = 2
+    OnClick = ButtonSignOutClick
   end
 end

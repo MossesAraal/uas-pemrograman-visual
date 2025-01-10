@@ -13,6 +13,7 @@ type
   { TFormUpdateKaryawan }
 
   TFormUpdateKaryawan = class(TForm)
+    Button1: TButton;
     ButtonDisplay: TButton;
     DataSource1: TDataSource;
     EditIDKaryawan: TEdit;
@@ -40,7 +41,9 @@ type
     TimePickerTanggalMasuk: TDateTimePicker;
     ZConnection1: TZConnection;
     ZQuery1: TZQuery;
+    procedure Button1Click(Sender: TObject);
     procedure ButtonDisplayClick(Sender: TObject);
+    procedure FormCreate(Sender: TObject);
     procedure RegisterClick(Sender: TObject);
   private
 
@@ -52,6 +55,8 @@ var
   FormUpdateKaryawan: TFormUpdateKaryawan;
 
 implementation
+uses
+  Unit2;
 
 {$R *.lfm}
 
@@ -87,6 +92,17 @@ begin
   ZQuery1.Close;
 end;
 
+procedure TFormUpdateKaryawan.Button1Click(Sender: TObject);
+begin
+  FormUpdateKaryawan.Close;
+  FormMonitoringKaryawan.Show;
+end;
+
+procedure TFormUpdateKaryawan.FormCreate(Sender: TObject);
+begin
+
+end;
+
 procedure TFormUpdateKaryawan.RegisterClick(Sender: TObject);
 begin
   ZQuery1.SQL.Text := 'UPDATE karyawan SET username=:username, password=:password, nama=:nama, tanggal_lahir=:tanggal_lahir, jenis_kelamin=:jenis_kelamin, tanggal_masuk=:tanggal_masuk, email=:email, no_telp=:no_telp, alamat=:alamat WHERE id=:id';
@@ -112,6 +128,10 @@ begin
   ZQuery1.ExecSQL;
   showMessage('data berhasil diupdate');
   ZQuery1.Close;
+
+  FormUpdateKaryawan.Close;
+  FormMonitoringKaryawan.ZQuery1.Refresh;
+  FormMonitoringKaryawan.Show;
 end;
 
 end.

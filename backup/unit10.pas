@@ -13,6 +13,7 @@ type
   { TFormAbsenOut }
 
   TFormAbsenOut = class(TForm)
+    ButtonKembali: TButton;
     ButtonPulang: TButton;
     DataSource1: TDataSource;
     EditIDKaryawan: TEdit;
@@ -20,7 +21,9 @@ type
     Label2: TLabel;
     ZConnection1: TZConnection;
     ZQuery1: TZQuery;
+    procedure ButtonKembaliClick(Sender: TObject);
     procedure ButtonPulangClick(Sender: TObject);
+    procedure FormCreate(Sender: TObject);
   private
 
   public
@@ -31,7 +34,8 @@ var
   FormAbsenOut: TFormAbsenOut;
 
 implementation
-
+uses
+  Unit8, Unit1;
 {$R *.lfm}
 
 { TFormAbsenOut }
@@ -41,13 +45,13 @@ var
   idKaryawan, lastID, total_hadir, total_absen, total_izin, laporan_absen_id: Integer;
 begin
   try
-    // Ambil nilai ID Karyawan dari form
-    if Trim(EditIDKaryawan.Text) = '' then
-      raise Exception.Create('ID Karyawan tidak boleh kosong.');
+    ZQuery1.SQL.Text := 'SELECT id FROM karyawan WHERE username = :username AND password = :password';
+    ZQuery1.ParamByName('username').AsString := FormLogin.EditUsername.Text;
+    ZQuery1.ParamByName('password').AsString := FormLogin.EditPassword.Text;
+    ZQuery1.Open;
+    idKaryawan := ZQuery1.FieldByName('id').AsInteger;
+    ZQuery1.Close;
 
-    idKaryawan := StrToInt(EditIDKaryawan.Text); // Konversi teks menjadi integer
-
-    // Update jam_keluar pada absensi terakhir yang ditemukan berdasarkan absen_id dan id_karyawan
     ZQuery1.SQL.Text :=
         'UPDATE absensi ' +
         'SET jam_keluar = :jam_keluar ' +
@@ -57,7 +61,7 @@ begin
     ZQuery1.ParamByName('jam_keluar').AsDateTime := Now; // Waktu sekarang
 
     ZQuery1.ExecSQL; // Eksekusi query update
-    ShowMessage('Jam Keluar berhasil diperbarui!');
+    ShowMessage('absen out berhasil pada pukul ' + FormatDateTime('hh:nn:ss', Now));
 
     ZQuery1.SQL.Text := 'select * from absensi order by jam_keluar desc limit 1';
     ZQuery1.Open;
@@ -67,7 +71,6 @@ begin
     ZQuery1.SQL.Text := 'select count(status_kehadiran) from absensi where status_kehadiran = :status_kehadiran AND id = :id;';
     ZQuery1.ParamByName('status_kehadiran').AsString := 'Hadir';
     ZQuery1.ParamByName('id').AsInteger := idKaryawan;
-    ZQuery1.ParamByName('periode_bulan').AsString := FormatDateTime('mm', Now);
     ZQuery1.Open;
     total_hadir := ZQuery1.FieldByName('count').AsInteger;
     ZQuery1.Close;
@@ -86,10 +89,9 @@ begin
     total_izin := ZQuery1.FieldByName('count').AsInteger;
     ZQuery1.Close;
 
-    ZQuery1.SQL.Text := 'INSERT INTO laporan_absensi_karyawan(absen_id, periode_bulan, total_hadir, total_absen, total_izin, tanggal) ' +
-    'VALUES(:absen_id, :periode_bulan, :total_hadir, :total_absen, :total_izin, :tanggal)';
+    ZQuery1.SQL.Text := 'INSERT INTO laporan_absensi_karyawan(absen_id, total_hadir, total_absen, total_izin, tanggal) ' +
+    'VALUES(:absen_id, :total_hadir, :total_absen, :total_izin, :tanggal)';
     ZQuery1.ParamByName('absen_id').AsInteger := lastID;
-    ZQuery1.ParamByName('periode_bulan').AsString := FormatDateTime('mmmm', Now);
     ZQuery1.ParamByName('total_hadir').AsInteger := total_hadir;
     ZQuery1.ParamByName('total_absen').AsInteger := total_absen;
     ZQuery1.ParamByName('total_izin').AsInteger := total_izin;
@@ -111,6 +113,17 @@ begin
     on E: Exception do
       ShowMessage('Terjadi kesalahan: ' + E.Message);
   end;
+end;
+
+procedure TFormAbsenOut.FormCreate(Sender: TObject);
+begin
+
+end;
+
+procedure TFormAbsenOut.ButtonKembaliClick(Sender: TObject);
+begin
+  FormAbsenOut.Close;
+  FormAbsensi.Show;
 end;
 
 end.

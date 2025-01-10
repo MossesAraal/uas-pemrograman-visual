@@ -6,6 +6,7 @@ object FormLogin: TFormLogin
   Caption = 'FormLogin'
   ClientHeight = 365
   ClientWidth = 578
+  OnCreate = FormCreate
   LCLVersion = '3.4.0.0'
   object ButtonLogin: TButton
     Left = 160
@@ -71,15 +72,6 @@ object FormLogin: TFormLogin
     Font.Quality = fqDraft
     Font.Style = [fsBold]
     ParentFont = False
-  end
-  object Button1: TButton
-    Left = 229
-    Height = 25
-    Top = 120
-    Width = 75
-    Caption = 'Register'
-    TabOrder = 3
-    OnClick = Button1Click
   end
   object ZConnection1: TZConnection
     ControlsCodePage = cCP_UTF8

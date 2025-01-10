@@ -13,6 +13,7 @@ type
   { TFormReportAbsensi }
 
   TFormReportAbsensi = class(TForm)
+    Button1: TButton;
     ButtonDisplay: TButton;
     DataSource1: TDataSource;
     EditIDKaryawan: TEdit;
@@ -33,6 +34,7 @@ type
     LabelTotalIzin: TLabel;
     ZConnection1: TZConnection;
     ZQuery1: TZQuery;
+    procedure Button1Click(Sender: TObject);
     procedure ButtonDisplayClick(Sender: TObject);
     procedure FormCreate(Sender: TObject);
   private
@@ -45,6 +47,8 @@ var
   FormReportAbsensi: TFormReportAbsensi;
 
 implementation
+uses
+  Unit8, Unit1;
 
 {$R *.lfm}
 
@@ -64,7 +68,7 @@ begin
   else
     begin
       ZQuery1.SQL.Text := 'SELECT * FROM absensi AS a INNER JOIN karyawan AS k ON a.id = k.id ' +
-      'INNER JOIN laporan_absensi_karyawan AS lak ON a.absen_id = lak.absen_id WHERE a.id = :id';
+      'INNER JOIN laporan_absensi_karyawan AS lak ON a.absen_id = lak.absen_id WHERE a.id = :id ORDER BY lak.total_hadir DESC LIMIT 1';
       ZQuery1.ParamByName('id').AsInteger := StrToInt(EditIDKaryawan.Text);
       ZQuery1.Open;
       LabelID.Caption := IntToStr(ZQuery1.FieldByName('id').AsInteger);
@@ -88,6 +92,12 @@ begin
         end;
       ZQuery1.Close;
     end;
+end;
+
+procedure TFormReportAbsensi.Button1Click(Sender: TObject);
+begin
+  FormReportAbsensi.Close;
+  FormMonitoringAbsensi.show;
 end;
 
 end.

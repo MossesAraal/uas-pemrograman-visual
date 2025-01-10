@@ -6,6 +6,7 @@ object FormAbsenIn: TFormAbsenIn
   Caption = 'FormAbsenIn'
   ClientHeight = 616
   ClientWidth = 691
+  OnCreate = FormCreate
   LCLVersion = '3.4.0.0'
   object Label1: TLabel
     Left = 168
@@ -20,17 +21,10 @@ object FormAbsenIn: TFormAbsenIn
     Font.Style = [fsBold]
     ParentFont = False
   end
-  object EditIDKaryawan: TEdit
-    Left = 345
-    Height = 23
-    Top = 132
-    Width = 123
-    TabOrder = 0
-  end
   object ComboBoxStatusKehadiran: TComboBox
-    Left = 345
+    Left = 367
     Height = 23
-    Top = 181
+    Top = 112
     Width = 119
     ItemHeight = 15
     Items.Strings = (
@@ -39,34 +33,21 @@ object FormAbsenIn: TFormAbsenIn
       'Sakit'
       'Cuti'
     )
-    TabOrder = 1
+    TabOrder = 0
   end
   object ButtonAbsenIn: TButton
-    Left = 294
+    Left = 312
     Height = 25
-    Top = 235
+    Top = 160
     Width = 75
     Caption = 'Absen'
-    TabOrder = 2
+    TabOrder = 1
     OnClick = ButtonAbsenInClick
   end
-  object Label4: TLabel
-    Left = 218
-    Height = 20
-    Top = 135
-    Width = 83
-    Caption = 'ID Karyawan'
-    Font.CharSet = ANSI_CHARSET
-    Font.Height = -15
-    Font.Name = 'Segoe UI'
-    Font.Pitch = fpVariable
-    Font.Quality = fqDraft
-    ParentFont = False
-  end
   object Label5: TLabel
-    Left = 218
+    Left = 240
     Height = 20
-    Top = 184
+    Top = 115
     Width = 111
     Caption = 'Status Kehadiran'
     Font.CharSet = ANSI_CHARSET
@@ -75,6 +56,15 @@ object FormAbsenIn: TFormAbsenIn
     Font.Pitch = fpVariable
     Font.Quality = fqDraft
     ParentFont = False
+  end
+  object ButtonKembali: TButton
+    Left = 392
+    Height = 25
+    Top = 160
+    Width = 75
+    Caption = 'Kembali'
+    TabOrder = 2
+    OnClick = ButtonKembaliClick
   end
   object ZConnection1: TZConnection
     ControlsCodePage = cCP_UTF8

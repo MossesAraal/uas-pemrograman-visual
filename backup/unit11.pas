@@ -6,7 +6,7 @@ interface
 
 uses
   Classes, SysUtils, DB, Forms, Controls, Graphics, Dialogs, StdCtrls,
-  ZConnection, ZDataset, DateTimePicker, Unit1;
+  ZConnection, ZDataset, DateTimePicker;
 
 type
 
@@ -14,6 +14,7 @@ type
 
   TFormDetailKaryawan = class(TForm)
     Button1: TButton;
+    Button2: TButton;
     DataSource1: TDataSource;
     Label10: TLabel;
     Label11: TLabel;
@@ -40,6 +41,7 @@ type
     ZConnection1: TZConnection;
     ZQuery1: TZQuery;
     procedure Button1Click(Sender: TObject);
+    procedure Button2Click(Sender: TObject);
     procedure FormCreate(Sender: TObject);
     procedure Label2Click(Sender: TObject);
   private
@@ -52,14 +54,15 @@ var
   FormDetailKaryawan: TFormDetailKaryawan;
 
 implementation
-
+uses
+  Unit2;
 {$R *.lfm}
 
 { TFormDetailKaryawan }
 
 procedure TFormDetailKaryawan.FormCreate(Sender: TObject);
 begin
-  showMessage('username');
+
 end;
 
 procedure TFormDetailKaryawan.Label2Click(Sender: TObject);
@@ -105,6 +108,12 @@ begin
         end;
       ZQuery1.Close;
     end;
+end;
+
+procedure TFormDetailKaryawan.Button2Click(Sender: TObject);
+begin
+  FormDetailKaryawan.Close;
+  FormMonitoringKaryawan.Show;
 end;
 
 end.

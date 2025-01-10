@@ -264,6 +264,15 @@ object FormReportAbsensiHarian: TFormReportAbsensiHarian
     Font.Quality = fqDraft
     ParentFont = False
   end
+  object Button1: TButton
+    Left = 32
+    Height = 25
+    Top = 352
+    Width = 75
+    Caption = 'Kembali'
+    TabOrder = 3
+    OnClick = Button1Click
+  end
   object ZConnection1: TZConnection
     ControlsCodePage = cCP_UTF8
     AfterConnect = ZConnection1AfterConnect

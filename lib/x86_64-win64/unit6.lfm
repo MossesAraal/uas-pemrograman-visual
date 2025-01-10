@@ -42,13 +42,40 @@ object FormMonitoringAbsensi: TFormMonitoringAbsensi
     TabOrder = 1
   end
   object ButtonReportBulanan: TButton
-    Left = 160
+    Left = 328
     Height = 25
     Top = 48
     Width = 147
     Caption = 'Report Absensi'
     TabOrder = 2
     OnClick = ButtonReportBulananClick
+  end
+  object Button1: TButton
+    Left = 488
+    Height = 25
+    Top = 48
+    Width = 147
+    Caption = 'Absen'
+    TabOrder = 3
+    OnClick = Button1Click
+  end
+  object Button2: TButton
+    Left = 168
+    Height = 25
+    Top = 48
+    Width = 147
+    Caption = 'Absensi Bulanan'
+    TabOrder = 4
+    OnClick = Button2Click
+  end
+  object Button3: TButton
+    Left = 8
+    Height = 35
+    Top = 336
+    Width = 90
+    Caption = 'Sign Out'
+    TabOrder = 5
+    OnClick = Button3Click
   end
   object ZConnection1: TZConnection
     ControlsCodePage = cCP_UTF8

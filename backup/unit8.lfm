@@ -9,27 +9,27 @@ object FormAbsensi: TFormAbsensi
   OnCreate = FormCreate
   LCLVersion = '3.4.0.0'
   object ButtonClockOut: TButton
-    Left = 320
+    Left = 104
     Height = 61
-    Top = 152
+    Top = 184
     Width = 126
     Caption = 'Clock Out'
     TabOrder = 0
     OnClick = ButtonClockOutClick
   end
   object ButtonClockIn: TButton
-    Left = 111
+    Left = 104
     Height = 61
-    Top = 152
+    Top = 112
     Width = 126
     Caption = 'Clock In'
     TabOrder = 1
     OnClick = ButtonClockInClick
   end
   object Label1: TLabel
-    Left = 176
+    Left = 168
     Height = 32
-    Top = 80
+    Top = 32
     Width = 209
     Caption = 'Absensi Karyawan'
     Font.CharSet = ANSI_CHARSET
@@ -40,21 +40,39 @@ object FormAbsensi: TFormAbsensi
     ParentFont = False
   end
   object ButtonReportHarian: TButton
-    Left = 111
+    Left = 304
     Height = 61
-    Top = 256
+    Top = 112
     Width = 126
     Caption = 'Absensi Harian'
     TabOrder = 2
     OnClick = ButtonReportHarianClick
   end
   object ButtonReportBulanan: TButton
-    Left = 320
+    Left = 304
     Height = 61
     Top = 256
     Width = 126
     Caption = 'Report Absensi'
     TabOrder = 3
     OnClick = ButtonReportBulananClick
+  end
+  object ButtonAbsensiBulanan: TButton
+    Left = 304
+    Height = 61
+    Top = 184
+    Width = 126
+    Caption = 'Absensi Bulanan'
+    TabOrder = 4
+    OnClick = ButtonAbsensiBulananClick
+  end
+  object ButtonSignOut: TButton
+    Left = 104
+    Height = 61
+    Top = 256
+    Width = 126
+    Caption = 'Sign Out'
+    TabOrder = 5
+    OnClick = ButtonSignOutClick
   end
 end

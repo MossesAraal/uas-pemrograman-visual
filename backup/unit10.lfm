@@ -6,6 +6,7 @@ object FormAbsenOut: TFormAbsenOut
   Caption = 'FormAbsenOut'
   ClientHeight = 510
   ClientWidth = 733
+  OnCreate = FormCreate
   LCLVersion = '3.4.0.0'
   object Label1: TLabel
     Left = 126
@@ -43,12 +44,20 @@ object FormAbsenOut: TFormAbsenOut
     TabOrder = 1
     OnClick = ButtonPulangClick
   end
+  object ButtonKembali: TButton
+    Left = 360
+    Height = 25
+    Top = 188
+    Width = 75
+    Caption = 'Kembali'
+    TabOrder = 2
+    OnClick = ButtonKembaliClick
+  end
   object ZConnection1: TZConnection
     ControlsCodePage = cCP_UTF8
     Properties.Strings = (
       'RawStringEncoding=DB_CP'
     )
-    Connected = True
     DisableSavepoints = False
     HostName = 'localhost'
     Port = 5432

@@ -32,41 +32,23 @@ object FormMonitoringKaryawan: TFormMonitoringKaryawan
     TabOrder = 0
     OnClick = ButtonTambahClick
   end
-  object ButtonRefresh: TButton
-    Left = 96
-    Height = 25
-    Top = 48
-    Width = 75
-    Caption = 'Refresh'
-    TabOrder = 1
-    OnClick = ButtonRefreshClick
-  end
   object ButtonUpdate: TButton
-    Left = 176
+    Left = 104
     Height = 25
     Top = 48
     Width = 75
     Caption = 'Update'
-    TabOrder = 2
+    TabOrder = 1
     OnClick = ButtonUpdateClick
   end
   object ButtonDelete: TButton
-    Left = 264
+    Left = 192
     Height = 25
     Top = 48
     Width = 75
     Caption = 'Delete'
-    TabOrder = 3
+    TabOrder = 2
     OnClick = ButtonDeleteClick
-  end
-  object EditDelete: TEdit
-    Left = 344
-    Height = 23
-    Top = 48
-    Width = 96
-    HelpType = htKeyword
-    TabOrder = 4
-    OnChange = EditDeleteChange
   end
   object DBGrid1: TDBGrid
     Left = 16
@@ -76,7 +58,7 @@ object FormMonitoringKaryawan: TFormMonitoringKaryawan
     Color = clWindow
     Columns = <>
     DataSource = DataSource1
-    TabOrder = 5
+    TabOrder = 3
   end
   object ButtonMonitoringAbsensi: TButton
     Left = 16
@@ -84,7 +66,7 @@ object FormMonitoringKaryawan: TFormMonitoringKaryawan
     Top = 328
     Width = 120
     Caption = 'Monitoring Absensi'
-    TabOrder = 6
+    TabOrder = 4
     OnClick = ButtonMonitoringAbsensiClick
   end
   object ButtonDetailKaryawan: TButton
@@ -93,8 +75,17 @@ object FormMonitoringKaryawan: TFormMonitoringKaryawan
     Top = 328
     Width = 120
     Caption = 'Detail Karyawan'
-    TabOrder = 7
+    TabOrder = 5
     OnClick = ButtonDetailKaryawanClick
+  end
+  object ButtonSignOut: TButton
+    Left = 432
+    Height = 33
+    Top = 328
+    Width = 120
+    Caption = 'Sign Out'
+    TabOrder = 6
+    OnClick = ButtonSignOutClick
   end
   object DataSource1: TDataSource
     DataSet = ZQuery1

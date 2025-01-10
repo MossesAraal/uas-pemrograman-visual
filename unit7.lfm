@@ -35,7 +35,7 @@ object FormReportAbsensiHarian: TFormReportAbsensiHarian
     Top = 43
     Width = 75
     Caption = 'Display'
-    TabOrder = 1
+    TabOrder = 2
     OnClick = ButtonDisplayClick
   end
   object TimePickerTanggal: TDateTimePicker
@@ -46,7 +46,7 @@ object FormReportAbsensiHarian: TFormReportAbsensiHarian
     CenturyFrom = 1941
     MaxDate = 2958465
     MinDate = -53780
-    TabOrder = 2
+    TabOrder = 1
     TrailingSeparator = False
     TextForNullDate = 'NULL'
     LeadingZeros = True
@@ -263,6 +263,15 @@ object FormReportAbsensiHarian: TFormReportAbsensiHarian
     Font.Pitch = fpVariable
     Font.Quality = fqDraft
     ParentFont = False
+  end
+  object Button1: TButton
+    Left = 32
+    Height = 25
+    Top = 352
+    Width = 75
+    Caption = 'Kembali'
+    TabOrder = 3
+    OnClick = Button1Click
   end
   object ZConnection1: TZConnection
     ControlsCodePage = cCP_UTF8

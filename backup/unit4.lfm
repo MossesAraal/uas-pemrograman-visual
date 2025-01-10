@@ -1,7 +1,7 @@
 object FormTambahKaryawan: TFormTambahKaryawan
-  Left = 380
+  Left = 410
   Height = 451
-  Top = 323
+  Top = 196
   Width = 522
   Caption = 'FormTambahKaryawan'
   ClientHeight = 451
@@ -248,8 +248,8 @@ object FormTambahKaryawan: TFormTambahKaryawan
     Left = 56
     Height = 20
     Top = 275
-    Width = 46
-    Caption = 'Bagian'
+    Width = 80
+    Caption = 'Department'
     Font.CharSet = ANSI_CHARSET
     Font.Height = -15
     Font.Name = 'Segoe UI'
@@ -264,18 +264,20 @@ object FormTambahKaryawan: TFormTambahKaryawan
     Width = 100
     ItemHeight = 15
     Items.Strings = (
-      'Admin'
+      'Accounting'
+      'Finance'
       'IT'
       'HRD'
+      'GA'
       'Purchasing'
       'Marketing'
       'Engineering'
       'Quality Control'
-      'Produksi'
+      'Production'
       'Maintenance'
+      'PPIC'
     )
     TabOrder = 10
-    Text = 'Bagian'
   end
   object Label14: TLabel
     Left = 56
@@ -305,16 +307,24 @@ object FormTambahKaryawan: TFormTambahKaryawan
       'Operator'
     )
     TabOrder = 11
-    Text = 'Jabatan'
   end
   object Register: TButton
     Left = 168
     Height = 25
     Top = 320
     Width = 75
-    Caption = 'Register'
+    Caption = 'Tambah'
     TabOrder = 12
     OnClick = RegisterClick
+  end
+  object Button1: TButton
+    Left = 256
+    Height = 25
+    Top = 320
+    Width = 75
+    Caption = 'Kembali'
+    TabOrder = 13
+    OnClick = Button1Click
   end
   object ZConnection1: TZConnection
     ControlsCodePage = cCP_UTF8

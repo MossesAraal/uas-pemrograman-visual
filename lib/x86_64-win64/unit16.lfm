@@ -1,0 +1,277 @@
+object FormReportAbsensiHarianUser: TFormReportAbsensiHarianUser
+  Left = 424
+  Height = 536
+  Top = 165
+  Width = 466
+  Caption = 'FormReportAbsensiHarianUser'
+  ClientHeight = 536
+  ClientWidth = 466
+  OnCreate = FormCreate
+  LCLVersion = '3.4.0.0'
+  object Label4: TLabel
+    Left = 32
+    Height = 20
+    Top = 48
+    Width = 52
+    Caption = 'Tanggal'
+    Font.CharSet = ANSI_CHARSET
+    Font.Height = -15
+    Font.Name = 'Segoe UI'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    ParentFont = False
+  end
+  object TimePickerTanggal: TDateTimePicker
+    Left = 112
+    Height = 23
+    Top = 45
+    Width = 83
+    CenturyFrom = 1941
+    MaxDate = 2958465
+    MinDate = -53780
+    TabOrder = 0
+    TrailingSeparator = False
+    TextForNullDate = 'NULL'
+    LeadingZeros = True
+    Kind = dtkDate
+    TimeFormat = tf24
+    TimeDisplay = tdHMS
+    DateMode = dmComboBox
+    Date = 45655
+    Time = 0.83871453703614
+    UseDefaultSeparators = True
+    HideDateTimeParts = []
+    MonthNames = 'Long'
+  end
+  object Label1: TLabel
+    Left = 32
+    Height = 20
+    Top = 136
+    Width = 16
+    Caption = 'ID'
+    Font.CharSet = ANSI_CHARSET
+    Font.Height = -15
+    Font.Name = 'Segoe UI'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Font.Style = [fsBold]
+    ParentFont = False
+  end
+  object LabelID: TLabel
+    Left = 195
+    Height = 20
+    Top = 136
+    Width = 6
+    Caption = '-'
+    Font.CharSet = ANSI_CHARSET
+    Font.Height = -15
+    Font.Name = 'Segoe UI'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    ParentFont = False
+  end
+  object ButtonDisplay: TButton
+    Left = 112
+    Height = 25
+    Top = 72
+    Width = 75
+    Caption = 'Display'
+    TabOrder = 1
+    OnClick = ButtonDisplayClick
+  end
+  object Label5: TLabel
+    Left = 32
+    Height = 20
+    Top = 160
+    Width = 42
+    Caption = 'Nama'
+    Font.CharSet = ANSI_CHARSET
+    Font.Height = -15
+    Font.Name = 'Segoe UI'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Font.Style = [fsBold]
+    ParentFont = False
+  end
+  object LabelNama: TLabel
+    Left = 195
+    Height = 20
+    Top = 160
+    Width = 6
+    Caption = '-'
+    Font.CharSet = ANSI_CHARSET
+    Font.Height = -15
+    Font.Name = 'Segoe UI'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    ParentFont = False
+  end
+  object Label6: TLabel
+    Left = 32
+    Height = 20
+    Top = 188
+    Width = 85
+    Caption = 'Department'
+    Font.CharSet = ANSI_CHARSET
+    Font.Height = -15
+    Font.Name = 'Segoe UI'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Font.Style = [fsBold]
+    ParentFont = False
+  end
+  object LabelDepartment: TLabel
+    Left = 195
+    Height = 20
+    Top = 188
+    Width = 6
+    Caption = '-'
+    Font.CharSet = ANSI_CHARSET
+    Font.Height = -15
+    Font.Name = 'Segoe UI'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    ParentFont = False
+  end
+  object Label7: TLabel
+    Left = 32
+    Height = 20
+    Top = 216
+    Width = 55
+    Caption = 'Jabatan'
+    Font.CharSet = ANSI_CHARSET
+    Font.Height = -15
+    Font.Name = 'Segoe UI'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Font.Style = [fsBold]
+    ParentFont = False
+  end
+  object LabelJabatan: TLabel
+    Left = 195
+    Height = 20
+    Top = 216
+    Width = 6
+    Caption = '-'
+    Font.CharSet = ANSI_CHARSET
+    Font.Height = -15
+    Font.Name = 'Segoe UI'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    ParentFont = False
+  end
+  object Label8: TLabel
+    Left = 32
+    Height = 20
+    Top = 244
+    Width = 79
+    Caption = 'Jam Masuk'
+    Font.CharSet = ANSI_CHARSET
+    Font.Height = -15
+    Font.Name = 'Segoe UI'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Font.Style = [fsBold]
+    ParentFont = False
+  end
+  object LabelJamMasuk: TLabel
+    Left = 195
+    Height = 20
+    Top = 244
+    Width = 6
+    Caption = '-'
+    Font.CharSet = ANSI_CHARSET
+    Font.Height = -15
+    Font.Name = 'Segoe UI'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    ParentFont = False
+  end
+  object Label9: TLabel
+    Left = 32
+    Height = 20
+    Top = 272
+    Width = 78
+    Caption = 'Jam Keluar'
+    Font.CharSet = ANSI_CHARSET
+    Font.Height = -15
+    Font.Name = 'Segoe UI'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Font.Style = [fsBold]
+    ParentFont = False
+  end
+  object LabelJamKeluar: TLabel
+    Left = 195
+    Height = 20
+    Top = 272
+    Width = 6
+    Caption = '-'
+    Font.CharSet = ANSI_CHARSET
+    Font.Height = -15
+    Font.Name = 'Segoe UI'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    ParentFont = False
+  end
+  object Label10: TLabel
+    Left = 32
+    Height = 20
+    Top = 296
+    Width = 44
+    Caption = 'Status'
+    Font.CharSet = ANSI_CHARSET
+    Font.Height = -15
+    Font.Name = 'Segoe UI'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Font.Style = [fsBold]
+    ParentFont = False
+  end
+  object LabelStatusKehadiran: TLabel
+    Left = 195
+    Height = 20
+    Top = 296
+    Width = 6
+    Caption = '-'
+    Font.CharSet = ANSI_CHARSET
+    Font.Height = -15
+    Font.Name = 'Segoe UI'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    ParentFont = False
+  end
+  object Button1: TButton
+    Left = 32
+    Height = 25
+    Top = 352
+    Width = 75
+    Caption = 'Kembali'
+    TabOrder = 2
+    OnClick = Button1Click
+  end
+  object ZConnection1: TZConnection
+    ControlsCodePage = cCP_UTF8
+    DisableSavepoints = False
+    HostName = 'localhost'
+    Port = 5432
+    Database = 'pemrogramanVisual'
+    User = 'postgres'
+    Password = 'Araal14'
+    Protocol = 'postgresql'
+    LibraryLocation = 'C:\Program Files\PostgreSQL\15\bin\libpq.dll'
+    Left = 132
+    Top = 420
+  end
+  object ZQuery1: TZQuery
+    Connection = ZConnection1
+    Params = <>
+    Left = 180
+    Top = 420
+  end
+  object DataSource1: TDataSource
+    DataSet = ZQuery1
+    Left = 236
+    Top = 420
+  end
+end

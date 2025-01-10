@@ -6,13 +6,16 @@ interface
 
 uses
   Classes, SysUtils, DB, Forms, Controls, Graphics, Dialogs, StdCtrls, DBGrids,
-  ZConnection, ZDataset, Unit7, Unit12, Unit13;
+  ZConnection, ZDataset, Unit7, Unit12, Unit13, Unit8, Unit14;
 
 type
 
   { TFormMonitoringAbsensi }
 
   TFormMonitoringAbsensi = class(TForm)
+    Button1: TButton;
+    Button2: TButton;
+    Button3: TButton;
     ButtonReportBulanan: TButton;
     ButtonIReportAbsensiHarian: TButton;
     DataSource1: TDataSource;
@@ -20,6 +23,9 @@ type
     Label1: TLabel;
     ZConnection1: TZConnection;
     ZQuery1: TZQuery;
+    procedure Button1Click(Sender: TObject);
+    procedure Button2Click(Sender: TObject);
+    procedure Button3Click(Sender: TObject);
     procedure ButtonRefreshClick(Sender: TObject);
     procedure ButtonIReportAbsensiHarianClick(Sender: TObject);
     procedure ButtonReportBulananClick(Sender: TObject);
@@ -35,18 +41,21 @@ var
   FormMonitoringAbsensi: TFormMonitoringAbsensi;
 
 implementation
-
+uses
+  Unit1;
 {$R *.lfm}
 
 { TFormMonitoringAbsensi }
 
 procedure TFormMonitoringAbsensi.ButtonIReportAbsensiHarianClick(Sender: TObject);
 begin
+  FormMonitoringAbsensi.Close;
   FormReportAbsensiHarian.Show;
 end;
 
 procedure TFormMonitoringAbsensi.ButtonReportBulananClick(Sender: TObject);
 begin
+  FormMonitoringAbsensi.Close;
   FormReportAbsensi.Show;
 end;
 
@@ -67,6 +76,26 @@ end;
 procedure TFormMonitoringAbsensi.ButtonRefreshClick(Sender: TObject);
 begin
 
+end;
+
+procedure TFormMonitoringAbsensi.Button1Click(Sender: TObject);
+begin
+  FormMonitoringAbsensi.Close;
+  FormAbsensi.Show;
+end;
+
+procedure TFormMonitoringAbsensi.Button2Click(Sender: TObject);
+begin
+  FormMonitoringAbsensi.Close;
+  FormAbsensiBulanan.Show;
+end;
+
+procedure TFormMonitoringAbsensi.Button3Click(Sender: TObject);
+begin
+  FormAbsensi.Close;
+  FormLogin.EditUsername.Text := '';
+  FormLogin.EditPassword.Text := '';
+  FormLogin.Show;
 end;
 
 end.

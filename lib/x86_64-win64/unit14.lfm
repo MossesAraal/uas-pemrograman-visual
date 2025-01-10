@@ -6,6 +6,7 @@ object FormAbsensiBulanan: TFormAbsensiBulanan
   Caption = 'FormAbsensiBulanan'
   ClientHeight = 557
   ClientWidth = 446
+  OnCreate = FormCreate
   LCLVersion = '3.4.0.0'
   object Label3: TLabel
     Left = 32
@@ -33,7 +34,7 @@ object FormAbsensiBulanan: TFormAbsensiBulanan
     Top = 43
     Width = 75
     Caption = 'Display'
-    TabOrder = 1
+    TabOrder = 3
     OnClick = ButtonDisplayClick
   end
   object Label4: TLabel
@@ -70,7 +71,7 @@ object FormAbsensiBulanan: TFormAbsensiBulanan
       'November'
       'December'
     )
-    TabOrder = 2
+    TabOrder = 1
   end
   object Label5: TLabel
     Left = 32
@@ -96,7 +97,7 @@ object FormAbsensiBulanan: TFormAbsensiBulanan
       '2024'
       '2025'
     )
-    TabOrder = 3
+    TabOrder = 2
   end
   object Label1: TLabel
     Left = 32
@@ -286,6 +287,15 @@ object FormAbsensiBulanan: TFormAbsensiBulanan
     Font.Pitch = fpVariable
     Font.Quality = fqDraft
     ParentFont = False
+  end
+  object ButtonKembali: TButton
+    Left = 32
+    Height = 25
+    Top = 375
+    Width = 75
+    Caption = 'Kembali'
+    TabOrder = 4
+    OnClick = ButtonKembaliClick
   end
   object ZConnection1: TZConnection
     ControlsCodePage = cCP_UTF8

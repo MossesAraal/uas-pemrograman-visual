@@ -13,6 +13,7 @@ type
   { TFormReportAbsensiHarian }
 
   TFormReportAbsensiHarian = class(TForm)
+    Button1: TButton;
     ButtonDisplay: TButton;
     DataSource1: TDataSource;
     EditIDKaryawan: TEdit;
@@ -52,14 +53,16 @@ var
   FormReportAbsensiHarian: TFormReportAbsensiHarian;
 
 implementation
-
+uses
+  Unit8, Unit6;
 {$R *.lfm}
 
 { TFormReportAbsensiHarian }
 
 procedure TFormReportAbsensiHarian.Button1Click(Sender: TObject);
 begin
-
+  FormReportAbsensiHarian.Close;
+  FormMonitoringAbsensi.Show;
 end;
 
 procedure TFormReportAbsensiHarian.ButtonDisplayClick(Sender: TObject);
@@ -90,6 +93,7 @@ begin
           LabelJamMasuk.Caption := '-';
           LabelJamKeluar.Caption := '-';
           LabelStatusKehadiran.Caption := '-';
+          showMessage('data tidak ada');
         end;
       ZQuery1.Close;
     end;

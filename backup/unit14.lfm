@@ -6,6 +6,7 @@ object FormAbsensiBulanan: TFormAbsensiBulanan
   Caption = 'FormAbsensiBulanan'
   ClientHeight = 557
   ClientWidth = 446
+  OnCreate = FormCreate
   LCLVersion = '3.4.0.0'
   object Label3: TLabel
     Left = 32
@@ -286,6 +287,15 @@ object FormAbsensiBulanan: TFormAbsensiBulanan
     Font.Pitch = fpVariable
     Font.Quality = fqDraft
     ParentFont = False
+  end
+  object ButtonKembali: TButton
+    Left = 32
+    Height = 25
+    Top = 375
+    Width = 75
+    Caption = 'Kembali'
+    TabOrder = 4
+    OnClick = ButtonKembaliClick
   end
   object ZConnection1: TZConnection
     ControlsCodePage = cCP_UTF8

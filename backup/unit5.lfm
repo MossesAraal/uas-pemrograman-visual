@@ -6,6 +6,7 @@ object FormUpdateKaryawan: TFormUpdateKaryawan
   Caption = 'FormUpdateKaryawan'
   ClientHeight = 568
   ClientWidth = 500
+  OnCreate = FormCreate
   LCLVersion = '3.4.0.0'
   object Label6: TLabel
     Left = 56
@@ -282,6 +283,15 @@ object FormUpdateKaryawan: TFormUpdateKaryawan
     Font.Pitch = fpVariable
     Font.Quality = fqDraft
     ParentFont = False
+  end
+  object Button1: TButton
+    Left = 248
+    Height = 25
+    Top = 320
+    Width = 75
+    Caption = 'Batal'
+    TabOrder = 13
+    OnClick = Button1Click
   end
   object DataSource1: TDataSource
     DataSet = ZQuery1

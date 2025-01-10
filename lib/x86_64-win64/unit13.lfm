@@ -1,7 +1,7 @@
 object FormReportAbsensi: TFormReportAbsensi
-  Left = 738
+  Left = 577
   Height = 453
-  Top = 151
+  Top = 195
   Width = 469
   Caption = 'FormReportAbsensi'
   ClientHeight = 453
@@ -225,6 +225,15 @@ object FormReportAbsensi: TFormReportAbsensi
     Font.Pitch = fpVariable
     Font.Quality = fqDraft
     ParentFont = False
+  end
+  object Button1: TButton
+    Left = 32
+    Height = 25
+    Top = 344
+    Width = 75
+    Caption = 'Kembali'
+    TabOrder = 2
+    OnClick = Button1Click
   end
   object ZConnection1: TZConnection
     ControlsCodePage = cCP_UTF8
